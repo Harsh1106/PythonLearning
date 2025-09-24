@@ -78,6 +78,9 @@ liger.growl()
 
 
 class Car:
+    def __init__(self, type):
+        self.type = type
+
     @staticmethod
     def start():
         print("Car started")
@@ -87,12 +90,25 @@ class Car:
         print("Car stopped")
 
 class ToyotoCar(Car):
-    def __init__(self, name):
+    def __init__(self, name, type):
+        super().__init__(type)
         self.name = name
+        super().start()
 
-car1 = ToyotoCar("Fortuner")
-car2 = ToyotoCar("Innova")
+car1 = ToyotoCar("Fortuner", "Electric")
 
 print(car1.name)
-print(car1.start())
-print(car1.stop())
+print(car1.type)
+
+#Class Method Decorator
+class Person:
+    name = "anonymous"
+
+    @classmethod
+    def changeName(cls, name):
+        cls.name = name
+
+p1 = Person()
+p1.changeName("Alice")
+print(p1.name)
+print(Person.name)
