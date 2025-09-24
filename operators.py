@@ -16,3 +16,11 @@ print(5 < 3 or (2 + 2 == 4 and 3 > 1))  # Combined logical expressions
 
 print('Harsh\'s "laptop"') # Escaping single quote
 print(r'c:\docs\navin')
+
+#bitwise operators
+print(~12) # Complement
+print(12 & 13) # And
+print(12 | 13) # Or
+print(12 ^ 13) #Xor
+print(10 << 2) #Left Shift
+print(10 >> 2) #Right Shift
